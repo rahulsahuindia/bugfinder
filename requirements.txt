@@ -1,0 +1,5 @@
+requests
+PyGithub
+tree-sitter
+tree-sitter-python
+tree-sitter-javascript
