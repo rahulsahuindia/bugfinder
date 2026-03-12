@@ -1,0 +1,19 @@
+name: Bug Finder Scan
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Bug Finder
+        uses: ./
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
